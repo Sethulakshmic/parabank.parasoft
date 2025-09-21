@@ -6,7 +6,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = {
+                "src/test/resources/features/registration.feature",
+                "src/test/resources/features/login.feature",
+                "src/test/resources/features/openNewAccount.feature"
+
+        },
         glue = {"stepdefinitions","hooks"},
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         monochrome = true

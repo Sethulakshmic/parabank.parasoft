@@ -20,14 +20,7 @@ public class Hooks {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
 
-
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.setcredentials("user", "asd");
-        System.out.println("before clicking");
-        loginPage.loginbtnclick();
-        System.out.println("button clicked");
     }
 
     @After
